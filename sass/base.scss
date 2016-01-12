@@ -1,33 +1,12 @@
 /* PARTS INCLUDES */
-@import "partials-scss/menu_horizontal";
-@import "partials-scss/variables";
-@import "partials-scss/fonts";
-@import "partials-scss/mixins";
-@import "partials-scss/mediaqs";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "mediaqs";
 
 html, body {
 	height: 100%;
 	margin: 0;
-}
-
-.owl-wrapper-outer {
-	height: 100% !important;
-}
-
-.owl-wrapper {
-	height: 100%;
-}
-
-.owl-item {
-	height: 100%;
-}
-
-.b-Amarelo {
-		height: 100%;
-}
-
-.owl-item h1 {
-		margin: 0;
 }
 
 .page {
@@ -61,289 +40,22 @@ html, body {
 		9. BANNER-TITLE PAGE
 		10. BOX-GRAL
 		11. ANIMATIONS
-				1.1 ICONS HOME PRODUCTOS
+				
 
 	*/
 
 	/* ========== 1. HEADER MEDIUM-UP ========== */
-	.fixed-medium-up {
-		position: fixed!important;
-		-webkit-transition: all 0.9s ease;
-    -moz-transition: all 0.9s ease;
-    -o-transition: all 0.9s ease;
-    transition: all 0.9s ease;
-    background-color: rgba(0, 0, 0, 0.7)!important;
-    @include padding(0px 0px 0px 0px!important);
-    height: 70px!important;
-    @include mediaqs(medium){
-  		height: 85px!important;
-  	}
-  	@include mediaqs(small){
-  		height: 10px!important;
-  	}
-    .menu {
-    	padding-top: 22px!important;
-    	@include mediaqs(medium){
-    		padding-top: 0px!important;
-    	}
-    }
-    .logo {
-    	padding-top: 16px!important;
-    	top: -6px!important;
-    	img {
-    		width: 160px !important;
-    	}
-    	@include mediaqs(medium){
-    		padding-top: 15px!important;
-    		img {
-    			width: 116px!important;
-    		}
-
-    	}
-    }
-	}
-	.header{
-		@include padding(20px 0px 0px 0px);
-		position: absolute;
-    z-index: 2;
-    width: 100%;
-    background-color: rgba(0,0,0, 0.18);
-
-		.menu {
-			@extend .menu-horizontal;
-			text-align: right;
-			padding-top: 45px;
-			@include mediaqs(medium){
-				text-align: center;
-				padding-top: 4px;
-    		padding-bottom: 7px;
-			}
-			ul {
-				li {
-					@include mediaqs(medium){
-						margin-left: 5px;
-					}
-					.active {
-						color: white;
-						border-bottom: 2px solid transparent;
-					}
-					a {
-						font-family: $Roboto-MediumItalic;
-						font-size: 1.2em;
-						color: white;
-						border-bottom: 2px solid transparent;
-						@include mediaqs(medium){
-							font-size: 1em;
-						}
-						&:hover {
-							_border-bottom: 2px solid $bluex;
-						}
-					}
-				}
-			}
-		}/* END MENU */
-
-		.logo {
-			text-align: left;
-			padding-top: 10px;
-			position: relative;
-    	top: 12px;
-			@include mediaqs(medium){
-				text-align: center;
-				padding-top: 0px;
-				top: -8px;
-				img {
-					width: 150px;
-				}
-			}
-		}
-	}/* END HEADER 1 */
+	
 
 	/* ========== 2. HEADER SMALL ========== */
-	.top-bar {
-			background-color: darken($color-title, 5%);
-			box-shadow: 4px 4px 3px -4px rgba(0, 0, 0, 0.7);
-		    -moz-box-shadow: 4px 4px 3px -4px rgba(0, 0, 0, 0.7);
-		    -ms-box-shadow: 4px 4px 3px -4px rgba(0, 0, 0, 0.7);
-		    -o-box-shadow: 4px 4px 3px -4px rgba(0, 0, 0, 0.7);
-		    -webkit-box-shadow: 4px 4px 3px -4px rgba(0, 0, 0, 0.7);
-		    transition: ease 0.4s all;
-			.active {
-				color: white;
-				background-color: $bluex;
-			}
-			.title-area {
-				.name {
-					padding-left: 10px;
-					padding-top: 6px;
-				}
-			}
-			.top-bar-section {
-				ul {
-					li {
-						a {
-							font-family: $Roboto-MediumItalic;
-							font-size: 1em;
-							&:hover {
-								background-color: $bluex;
-							}
-						}
-					}
-				}
-			}
-		}
-		
 
 
 	/* ========== 3. FOOTER ========== */
-	.footer {
-		background-color: $color-footer-header;
-		color: white;
-		text-align: center;
-		margin-top: 2%;
-		.line-green-blue {
-			background-color: $bluex;
-			height: 5px;
-		}
-		.site-menu {
-			margin-top: 20px;
-			ul {
-				li {
-					display: inline-block;
-					.active {
-						color: white;
-						border-bottom: 2px solid $bluex;
-					}
-					a {
-						font-family: $Roboto-Light;
-						color: white;
-						margin-right: 10px;
-						margin-left: 10px;
-						&:hover {
-							border-bottom: 2px solid $bluex;
-						}
-					}
-				}
-			}
-		}/* SITE MENU */
-		.contacts-medium-up,
-		.contacts-small {
-			@include mediaqs(small){
-				margin-top: 30px;
-				font-size: 0.8em;
-			}
-			.skype-medium-up {
-				@include mediaqs(small){
-					display: none;
-				}
-			}
-			a {
-				font-family: $Roboto-Light;
-				color: white;
-				margin-right: 15px;
-				margin-left: 15px;
-				margin-top: 10px;
-				@include mediaqs(small){
-					display: block;
-				}
-				img {
-					margin-right: 10px;
-				}
-			}
-		}
-		.copyright {
-			margin-top: 20px;
-			padding-bottom: 5px;
-			.text {
-				font-family: $Roboto-LightItalic;
-				color: white;
-				font-size: 0.9em;
-				img {
-					position: relative;
-					top: -3px;
-				}
-				a {
-					color: $bluex;
-				}
-			}
-		}
-	}
-
-	.arrow-top {
-		position: fixed;
-		bottom: 2%;
-		right: 1%;
-	}
+	
 
 	/* ========== 4. GENERAL ========== */
 	
-	.image-line {
-		position: relative;
-		top: -43px;
-	}
 	
-	.text-ppal-h1 {
-		font-family: $Roboto-LightItalic;
-		font-size: 1.5em;
-		margin-top: 2em;
-		margin-bottom: 1em;
-		padding-left: 5em;
-		padding-right: 5em;
-		span {
-			font-family: $Roboto-Medium;
-			color: $color-title;
-		}
-		@include mediaqs(small){
-			padding: 0px;
-			text-align: center!important;
-		}
-	}
-
-	.title {
-		font-family: $Roboto-Medium;
-		font-size: 1.2em;
-		color: $color-title;
-		padding: 30px;
-	}
-
-	.title-italic {
-		font-family: $Roboto-MediumItalic;
-		font-size: 1.2em;
-		color: $color-title;
-	}
-
-	.text {
-		font-family: $Roboto-Light;
-		font-size: 1.2em;
-		color: $color-text;
-		text-align: center;
-		//padding: 0px 15px;
-	}
-
-	.text-left_ {
-		font-family: $Roboto-Light;
-		font-size: 1.2em;
-		color: #333;
-		text-align: left;
-		@include mediaqs(small){
-			text-align: center;
-		}
-	}
-
-	.vertical-center {
-		display: -webkit-box !important;
-		/* OLD - iOS 6-, Safari 3.1-6 */
-		display: -webkit-flex !important;
-		/* NEW - Chrome */
-		display: flex !important;
-		justify-content: center;
-		-webkit-justify-content: space-around;
-		/* Safari 6.1+ */
-		flex-direction: column;
-		-webkit-flex-direction: column;
-		/* Safari 6.1+ */
-		height: auto;
-	}
 
 	/* ========== 5. FORMULARIO ========== */
 	.form {
@@ -363,11 +75,7 @@ html, body {
 
 		}
 		label {
-			font-family: $Roboto-MediumItalic;
-			font-size: 1.3em;
-			span {
-				color: $bluex;
-			}
+			
 		}
 		textarea {
 
@@ -375,372 +83,31 @@ html, body {
 	}
 
 	::-webkit-input-placeholder {
-		font-family: $Roboto-LightItalic;
 	}
 	::-moz-placeholder {
-		font-family: $Roboto-LightItalic;
 	} /* firefox 19+ */
 	:-ms-input-placeholder {
-		font-family: $Roboto-LightItalic;
 	} /* ie */
 	input:-moz-placeholder {
-		font-family: $Roboto-LightItalic;
+		
 	}
 
 	/* ========== 6. BUTTONS ========== */
 
-	// Transoarent
-	.button-transparent {
-		@include button-bg(transparent);
-		text-align: center;
-		a {
-			@include button-bg(transparent);
-			border: 3px solid white;
-			color: white;
-			@include padding(5px 20px);
-			font-family: $Roboto-LightItalic;
-			font-size: 1.2em;
-			&:hover {
-				background-color: white;
-				color: black;
-				transition: all 1s ease;
-			}
-		}
-	}
-	@keyframes animatedBackground {
-		from { background-position: 0 0; }
-		to { background-position: 100% 0; }
-	}
-
-	.button-transparent-black {
-		@include button-bg(transparent);
-		text-align: center;
-		
-		a {
-			@include button-bg(transparent);
-			border: 3px solid $color-title;
-			color: $color-title;
-			@include padding(5px 40px);
-			font-family: $Roboto-MediumItalic;
-			font-size: 1.2em;
-			&:hover {
-				border: 3px solid $bluex;
-			}
-		}
-	}
-
-	.button-transparent-blue {
-		@include button-bg(transparent);
-		text-align: center;
-		
-		a {
-			@include button-bg(transparent);
-			border: 3px solid $bluex;
-			color: $color-title;
-			@include padding(5px 40px);
-			font-family: $Roboto-MediumItalic;
-			font-size: 1.2em;
-			&:hover {
-				border: 3px solid $color-title;
-			}
-		}
-	}
-
-	/* BUTTON ANIMATIO BLACK TO BLUE */
-	.button-black {
-	  position: relative;
-	  background: $bluex;
-	  text-transform: uppercase;
-	  z-index: 1;
-	  &:hover {
-	  	color:white!important;
-	  }
-	}
-
-	.fill:before {
-	  content: "";
-	  position: absolute;
-	  background: $bluex;
-	  border: 1px solid $bluex;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  top: 100%;
-	  z-index: -1;
-	  -webkit-transition: top 0.20s ease-in;
-	  color: white;
-	  margin-left:0px;
-	  margin-right:-1px;
-	}
-
-	.fill:hover:before {
-	  top: 0;
-	  color: white;
-	}
-
-	/* BUTTON ANIMATIO BLUE TO BLACK */
-	.button-blue {
-	  position: relative;
-	  background: red;
-	  text-transform: uppercase;
-	  z-index: 1;
-	  &:hover {
-	  	color:white!important;
-	  }
-	}
-
-	.fill-blue:before {
-	  content: "";
-	  position: absolute;
-	  background: $color-title;
-	  border: 1px solid $color-title;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  top: 100%;
-	  z-index: -1;
-	  -webkit-transition: top 0.20s ease-in;
-	  color: white;
-	  margin-left:0px;
-	  margin-right:-1px;
-	}
-
-	.fill-blue:hover:before {
-	  top: 0;
-	  color: white;
-	}
-
+	
 	/* ========== 7. TIPS ========== */
-	// ==Alinea a varias divs
-	.inline-List-div {
-		display: inline-block;
-	}
-
-	.vertical-center {
-		display: -webkit-box !important;
-		/* OLD - iOS 6-, Safari 3.1-6 */
-		display: -webkit-flex !important;
-		/* NEW - Chrome */
-		display: flex !important;
-		justify-content: center;
-		-webkit-justify-content: space-around;
-		/* Safari 6.1+ */
-		flex-direction: column;
-		-webkit-flex-direction: column;
-		/* Safari 6.1+ */
-		height: auto;
-	}
-
-	.collapse {
-		padding: 0px;
-	}
+	
 
 	/* ========== 8. BANNER IMAGE ========== */
-	.banner-image {
-		img {
-			width: 100%;
-		}
-		.banner-title {
-			@include title-banner;
-		}
-		.banner-box-small {
-			@include title-banner-border
-		}
-
-		.quienessomos {
-			background-image: url(../img/banners/quienessomos.png);
-			@include banner-style;
-		}
-
-		.contactenos {
-			background-image: url(../img/banners/contactenos.png);
-			@include banner-style;
-		}
-
-		.blog {
-			background-image: url(../img/banners/blog.png);
-			@include banner-style;
-		}
-
-		.productos {
-			background-image: url(../img/banners/productos.png);
-			@include banner-style;
-		}
-
-		.producto_ampliado {
-			background-image: url(../img/banners/product_ampl.png);
-			@include banner-style;
-		}
-
-		.crm {
-			background-image: url(../img/banners/crm.png);
-			@include banner-style;
-		}
-
-		.itmetrix {
-			background-image: url(../img/banners/itmetrix.png);
-			@include banner-style;
-		}
-
-		.fnex {
-			background-image: url(../img/banners/fnex.png);
-			@include banner-style;
-		}
-
-		.amedida {
-			background-image: url(../img/banners/amedida.png);
-			@include banner-style;
-		}
-	}
-
+	
 	/* ========== 9. BANNER-TITLE PAGE  ========== */
 
-	.banner-title-page,
-	.banner-title-page-index {
-		.row {
-			min-width: 100%;
-		}
-		.text {
-			@include padding(0px);
-			text-align: center;
-			font-family: $Roboto-MediumItalic;
-			font-size: 1.9em;
-			color: white;
-			height: 20px;
-		}
-		.text-banner-violet {
-			background-color: $bg-violet;
-		}
-		.text-banner-blue {
-			background-color: $bluex;
-		}
-		.text-banner-green-blue {
-			background-color: $bg-green-blue;
-		}
-		.text-banner-blue-light {
-			background-color: $bluex;
-		}
-	}
-
-	.banner-title-page-index {
-		.text {
-			@include padding(13px);
-			height:auto;
-		}
-	}
-
-	.banner-title-page-prod {
-		background-color: $bluex;
-		@include padding(10px);
-		padding-bottom: 50px;
-		.text {
-			@include padding(10px);
-			text-align: center;
-			font-size: 1.2em;
-			font-family: $Roboto-LightItalic;
-			color: white;
-			text-align: justify;
-		}
-	}
+	
 
 	/* ========== 10. BOX-GRAL  ========== */
 	
-	.box {
-		margin-top: 2em;
-		margin-bottom: 2em;
-		.icon {
-			@include mediaqs(medium){
-				text-align: center!important;
-			}
-			@include mediaqs(small){
-				text-align: center!important;
-				@include padding(0px 0px 20px 0px);
-			}
-		}
-		.title-italic {
-			@include mediaqs(medium){
-				text-align: center;
-			}
-		}
-		.text {
-			@include mediaqs(medium){
-				padding: 0px;
-				text-align: center!important;
-			}
-			@include mediaqs(small){
-				padding: 0px;
-				text-align: center!important;
-			}
-		}
-	}
+	
 
-	/* ========== 1.1 ICONS HOME PRODUCTOS ========== */
-	.icon1 .hi-icon:after {
-		box-shadow: 3px 3px pink;
-	}
-	.animations {
-		.icon-1 {
-			.hi-icon {
-				box-shadow: 0 0 0 0px transparent;
-				opacity: 1;
-				&:after {
-					box-shadow: 3px 3px $icon-blue-light!important;
-				}
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-		.icon-2 {
-			.hi-icon {
-				box-shadow: 0 0 0 0px transparent;
-				opacity: 1;
-				&:after {
-					box-shadow: 3px 3px $icon-green!important;
-				}
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-		.icon-3 {
-			.hi-icon {
-				box-shadow: 0 0 0 0px transparent;
-				opacity: 1;
-				&:after {
-					box-shadow: 3px 3px $icon-violer!important;
-				}
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-		.icon-4 {
-			.hi-icon {
-				box-shadow: 0 0 0 0px transparent;
-				opacity: 1;
-				&:after {
-					box-shadow: 3px 3px $icon-red!important;
-				}
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-	}
+	
+		
 }/* END PAGE */
-@-webkit-keyframes scaleUp {
-	80% {
-		opacity: 0;
-		-webkit-transform: scale(2);
-	}
-	100% {
-		opacity: 0;
-		-webkit-transform: scale(2);
-	}
-}
-@-webkit-keyframes fillToRight {
-	to { 
-		width: 100%;
-	}
-}
